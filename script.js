@@ -1,47 +1,75 @@
-// Dynamic Year for Footer
-document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-// Dynamic Last Modified Date
-document.getElementById('lastModified').textContent += document.lastModified;
-
-// Course Data
 const courses = [
-    { name: "WDD 130 - Web Fundamentals", completed: true, credits: 3 },
-    { name: "WDD 131 - Dynamic Web Fundamentals", completed: false, credits: 3 },
-    { name: "CSE 100 - Computer Science Basics", completed: false, credits: 4 },
-    { name: "WDD 230 - Advanced Web Design", completed: true, credits: 4 },
-    { name: "CSE 200 - Data Structures", completed: false, credits: 4 }
+    {
+        subject: "CSE",
+        number: 110,
+        title: "Introduction to Programming",
+        credits: 2,
+        certificate: "Web and Computer Programming",
+        description: "This course introduces students to programming basics. Topics include variables, decisions, loops, arrays, and I/O to solve problems.",
+        technology: ["Python"],
+        completed: false
+    },
+    {
+        subject: "WDD",
+        number: 130,
+        title: "Web Fundamentals",
+        credits: 2,
+        certificate: "Web and Computer Programming",
+        description: "This course introduces students to web design and development careers through hands-on web programming.",
+        technology: ["HTML", "CSS"],
+        completed: false
+    },
+    {
+        subject: "CSE",
+        number: 111,
+        title: "Programming with Functions",
+        credits: 2,
+        certificate: "Web and Computer Programming",
+        description: "Students learn to write and call functions to solve problems in business, science, and humanities.",
+        technology: ["Python"],
+        completed: false
+    }
 ];
 
-// Function to Display Courses
-function displayCourses(filteredCourses) {
+document.addEventListener('DOMContentLoaded', () => {
     const courseList = document.getElementById('courseList');
-    courseList.innerHTML = ''; // Clear the list first
+    const totalCredits = document.getElementById('totalCredits');
+    const currentYear = document.getElementById('currentYear');
+    const lastModified = document.getElementById('lastModified');
 
-    let totalCredits = 0;
-    filteredCourses.forEach(course => {
-        const courseElement = document.createElement('div');
-        courseElement.classList.add('course');
-        courseElement.innerHTML = `
-            <h3>${course.name}</h3>
-            <p>Credits: ${course.credits}</p>
-            <p>Status: ${course.completed ? 'Completed' : 'Not Completed'}</p>
-        `;
-        courseList.appendChild(courseElement);
+    // Display current year and last modified date
+    currentYear.textContent = new Date().getFullYear();
+    lastModified.textContent += document.lastModified;
 
-        if (course.completed) {
-            totalCredits += course.credits;
-        }
-    });
+    // Filter buttons
+    document.getElementById('allCourses').addEventListener('click', () => displayCourses(courses));
+    document.getElementById('wddCourses').addEventListener('click', () => filterCourses('WDD'));
+    document.getElementById('cseCourses').addEventListener('click', () => filterCourses('CSE'));
 
-    // Update Total Credits
-    document.getElementById('totalCredits').textContent = totalCredits;
-}
+    // Display courses
+    function displayCourses(courseArray) {
+        courseList.innerHTML = '';
+        let creditSum = 0;
+        courseArray.forEach(course => {
+            const courseItem = document.createElement('div');
+            courseItem.innerHTML = `
+                <h3>${course.title}</h3>
+                <p>${course.description}</p>
+                <p>Credits: ${course.credits}</p>
+                <p>Technology: ${course.technology.join(', ')}</p>
+            `;
+            courseList.appendChild(courseItem);
+            creditSum += course.credits;
+        });
+        totalCredits.textContent = creditSum;
+    }
 
-// Initial Display of All Courses
-displayCourses(courses);
+    // Filter courses by subject
+    function filterCourses(subject) {
+        const filteredCourses = courses.filter(course => course.subject === subject);
+        displayCourses(filteredCourses);
+    }
 
-// Filter Courses based on User Click
-document.getElementById('allCourses').addEventListener('click', () => displayCourses(courses));
-document.getElementById('wddCourses').addEventListener('click', () => displayCourses(courses.filter(course => course.name.includes('WDD'))));
-document.getElementById('cseCourses').addEventListener('click', () => displayCourses(courses.filter(course => course.name.includes('CSE'))));
+    // Initialize with all courses
+    displayCourses(courses);
+});
