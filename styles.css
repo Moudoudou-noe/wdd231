@@ -57,10 +57,12 @@ main {
     margin-top: 20px;
 }
 section .BLENDER{
-    background-color: #497e9a;
-    color: rgb(15, 27, 24);
-    border: none; 
-    
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    cursor: pointer;
 }
 section span{
     color: rgb(206, 156, 81);
