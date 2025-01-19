@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Timbuktu Bakery",
+        "address": "123 Main St, Timbuktu",
+        "phone": "+223 45 67 89 01",
+        "website": "http://timbuktubakery.com",
+        "image": "bakery.jpg",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Desert Sands Hotel",
+        "address": "456 Sahara Ave, Timbuktu",
+        "phone": "+223 45 67 89 02",
+        "website": "http://desertsandshotel.com",
+        "image": "hotel.jpg",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Sahara Adventures",
+        "address": "789 Explorer Rd, Timbuktu",
+        "phone": "+223 45 67 89 03",
+        "website": "http://saharaadventures.com",
+        "image": "adventures.jpg",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Timbuktu Tech",
+        "address": "321 Innovation Ln, Timbuktu",
+        "phone": "+223 45 67 89 04",
+        "website": "http://timbuktutech.com",
+        "image": "tech.jpg",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Nomad Coffee",
+        "address": "654 Caravan Blvd, Timbuktu",
+        "phone": "+223 45 67 89 05",
+        "website": "http://nomadcoffee.com",
+        "image": "coffee.jpg",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Artisans of Timbuktu",
+        "address": "987 Heritage St, Timbuktu",
+        "phone": "+223 45 67 89 06",
+        "website": "http://artisansoftimbuktu.com",
+        "image": "artisans.jpg",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Oasis Spa",
+        "address": "258 Wellness Dr, Timbuktu",
+        "phone": "+223 45 67 89 07",
+        "website": "http://oasisspa.com",
+        "image": "spa.jpg",
+        "membershipLevel": 3
+    }
+]
