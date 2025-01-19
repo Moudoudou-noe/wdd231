@@ -16,6 +16,7 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
@@ -55,7 +56,17 @@ main {
     padding: 20px;
     margin-top: 20px;
 }
-
+section .BLENDER{
+    background-color: #497e9a;
+    color: rgb(15, 27, 24);
+    border: none;
+    padding: 15px 890px; 
+    margin: none;
+}
+section span{
+    color: rgb(206, 156, 81);
+    border: none;
+}
 button {
     background-color: #0077b6;
     color: white;

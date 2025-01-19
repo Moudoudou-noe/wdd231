@@ -1,3 +1,4 @@
+
 const courses = [
     { name: "HTML and CSS", code: "WDD101", credits: 3, completed: true },
     { name: "JavaScript Basics", code: "WDD102", credits: 3, completed: false },
