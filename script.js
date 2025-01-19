@@ -4,20 +4,28 @@ const courses = [
     { name: "JavaScript Basics", code: "WDD102", credits: 3, completed: false },
     { name: "Responsive Web Design", code: "WDD201", credits: 3, completed: false },
     { name: "Database Fundamentals", code: "CSE101", credits: 3, completed: true },
-    { name: "Server-Side Programming", code: "CSE202", credits: 3, completed: false }
+    { name: "Server-Side Programming", code: "CSE202", credits: 3, completed: false },
 ];
 
 function displayCourses(filter = 'all') {
     const courseList = document.getElementById('course-list');
-    courseList.innerHTML = '';
+    if (!courseList) {
+        console.error("Element with ID 'course-list' not found.");
+        return;
+    }
+
+    courseList.innerHTML = ''; // Clear existing content
     let filteredCourses;
 
-    if (filter === 'wdd') {
-        filteredCourses = courses.filter(course => course.code.startsWith('WDD'));
-    } else if (filter === 'cse') {
-        filteredCourses = courses.filter(course => course.code.startsWith('CSE'));
-    } else {
-        filteredCourses = courses;
+    switch (filter) {
+        case 'wdd':
+            filteredCourses = courses.filter(course => course.code.startsWith('WDD'));
+            break;
+        case 'cse':
+            filteredCourses = courses.filter(course => course.code.startsWith('CSE'));
+            break;
+        default:
+            filteredCourses = courses;
     }
 
     filteredCourses.forEach(course => {
@@ -38,14 +46,29 @@ function displayCourses(filter = 'all') {
 
 function updateTotalCredits(filteredCourses) {
     const totalCredits = filteredCourses.reduce((acc, course) => acc + course.credits, 0);
-    document.getElementById('total-credits').innerText = `Total Credits: ${totalCredits}`;
+    const totalCreditsElement = document.getElementById('total-credits');
+    if (totalCreditsElement) {
+        totalCreditsElement.innerText = `Total Credits: ${totalCredits}`;
+    } else {
+        console.error("Element with ID 'total-credits' not found.");
+    }
 }
 
-document.getElementById('show-all').addEventListener('click', () => displayCourses('all'));
-document.getElementById('filter-wdd').addEventListener('click', () => displayCourses('wdd'));
-document.getElementById('filter-cse').addEventListener('click', () => displayCourses('cse'));
+// Event listeners for buttons
+document.getElementById('show-all')?.addEventListener('click', () => displayCourses('all'));
+document.getElementById('filter-wdd')?.addEventListener('click', () => displayCourses('wdd'));
+document.getElementById('filter-cse')?.addEventListener('click', () => displayCourses('cse'));
 
-document.getElementById('current-year').textContent = new Date().getFullYear();
-document.getElementById('last-modified').textContent = `Last Modified: ${document.lastModified}`;
+// Update dynamic footer information
+const currentYearElement = document.getElementById('current-year');
+if (currentYearElement) {
+    currentYearElement.textContent = new Date().getFullYear();
+}
 
+const lastModifiedElement = document.getElementById('last-modified');
+if (lastModifiedElement) {
+    lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
+}
+
+// Initial display
 displayCourses();
