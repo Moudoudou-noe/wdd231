@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/thankyou.css">
+    <script defer src="scripts/thankyou.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Join the Chamber of Commerce</h1>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Membership Application Form</h2>
+            <form action="thankyou.html" method="get">
+                <label>First Name: <input type="text" name="firstName" required autocomplete="given-name"></label>
+                <label>Last Name: <input type="text" name="lastName" required autocomplete="family-name"></label>
+                <label>Organization Title: <input type="text" name="organizationTitle" pattern="[A-Za-z\s-]{7,}" title="Only letters, spaces, and hyphens allowed (min. 7 characters)"></label>
+                <label>Email: <input type="email" name="email" required placeholder="example@domain.com"></label>
+                <label>Mobile Phone: <input type="tel" name="phone" required></label>
+                <label>Business/Organization Name: <input type="text" name="organization" required autocomplete="organization"></label>
+                <label>Membership Level:
+                    <select name="membership">
+                        <option value="np">NP - Non-Profit</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select>
+                </label>
+                <label>Business Description: <textarea name="description"></textarea></label>
+                <input type="hidden" id="timestamp" name="timestamp">
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section class="membership-cards">
+            <h2>Membership Levels</h2>
+            <div class="cards">
+                <div class="card" onclick="openModal('npModal')">
+                    <h3>NP - Non-Profit</h3>
+                    <p>Free membership for non-profit organizations.</p>
+                </div>
+                <div class="card" onclick="openModal('bronzeModal')">
+                    <h3>Bronze</h3>
+                    <p>Basic benefits with increased visibility.</p>
+                </div>
+                <div class="card" onclick="openModal('silverModal')">
+                    <h3>Silver</h3>
+                    <p>Exclusive event access and promotions.</p>
+                </div>
+                <div class="card" onclick="openModal('goldModal')">
+                    <h3>Gold</h3>
+                    <p>Premium partner with special spotlights.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="npModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('npModal')">&times;</span>
+            <h2>NP - Non-Profit</h2>
+            <p>No fees. Access to resources and free events.</p>
+        </div>
+    </div>
+
+    <div id="bronzeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
+            <h2>Bronze</h2>
+            <p>Benefits: Basic advertising, forum access.</p>
+        </div>
+    </div>
+
+    <div id="silverModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('silverModal')">&times;</span>
+            <h2>Silver</h2>
+            <p>Access to exclusive events and special promotions.</p>
+        </div>
+    </div>
+
+    <div id="goldModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('goldModal')">&times;</span>
+            <h2>Gold</h2>
+            <p>VIP benefits, premium advertising, website spotlights.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; <span id="year"></span> Chamber of Commerce | Last Updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        document.getElementById('timestamp').value = new Date().toISOString();
+
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
