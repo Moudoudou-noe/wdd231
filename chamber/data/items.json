@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Congo River",
+        "image": "images/congo-river.webp",
+        "address": "Congo Brazzaville",
+        "description": "The Congo River is the second longest river in Africa and a major waterway in the region.",
+        "link": "https://en.wikipedia.org/wiki/Congo_River"
+    },
+    {
+        "name": "Basilica Sainte-Anne",
+        "image": "images/basilique-sainte-anne.webp",
+        "address": "Brazzaville, Congo",
+        "description": "A beautiful Roman Catholic basilica known for its unique green-tiled roof and architecture.",
+        "link": "https://en.wikipedia.org/wiki/Basilique_Sainte-Anne_du_Congo"
+    },
+    {
+        "name": "Pointe-Noire Beach",
+        "image": "images/pointe-noire-beach.webp",
+        "address": "Pointe-Noire, Congo",
+        "description": "A stunning coastline with golden sands, attracting locals and tourists alike.",
+        "link": "https://en.wikipedia.org/wiki/Pointe-Noire"
+    },
+    {
+        "name": "Lesio Louna Gorilla Reserve",
+        "image": "images/lesio-louna.webp",
+        "address": "Léfini Reserve, Congo",
+        "description": "A sanctuary dedicated to the protection of western lowland gorillas.",
+        "link": "https://en.wikipedia.org/wiki/Lefini_Faunal_Reserve"
+    },
+    {
+        "name": "Odzala National Park",
+        "image": "images/odzala-park.webp",
+        "address": "Congo",
+        "description": "One of Africa’s oldest national parks, home to unique wildlife and dense rainforests.",
+        "link": "https://en.wikipedia.org/wiki/Odzala-Kokoua_National_Park"
+    },
+    {
+        "name": "Marche Total",
+        "image": "images/marche-total.webp",
+        "address": "Brazzaville, Congo",
+        "description": "A bustling market where you can find local crafts, fresh produce, and traditional Congolese goods.",
+        "link": "https://en.wikipedia.org/wiki/Brazzaville"
+    },
+    {
+        "name": "Loufoulakari Falls",
+        "image": "images/loufoulakari-falls.webp",
+        "address": "Near Brazzaville, Congo",
+        "description": "A breathtaking waterfall surrounded by lush greenery, a popular tourist attraction.",
+        "link": "https://en.wikipedia.org/wiki/Loufoulakari_Falls"
+    },
+    {
+        "name": "Diosso Gorge",
+        "image": "images/diosso-gorge.webp",
+        "address": "Near Pointe-Noire, Congo",
+        "description": "A magnificent red rock canyon offering scenic views and a glimpse into geological history.",
+        "link": "https://en.wikipedia.org/wiki/Diosso"
+    }
+]
