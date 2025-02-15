@@ -1,0 +1,42 @@
+{
+    "attractions": [
+      {
+        "name": "Parc National de Nouabalé-Ndoki",
+        "description": "Un des parcs les plus reculés de la République du Congo, connu pour sa biodiversité et ses espèces animales rares.",
+        "image": "images/nouabale-ndoki.jpg",
+        "location": "Nord de la République du Congo",
+        "link": "learn_more.html#nouabale"
+      },
+      {
+        "name": "Basilique Sainte-Anne du Congo",
+        "description": "Une magnifique basilique située à Brazzaville, un lieu de pèlerinage pour les chrétiens et un exemple d'architecture impressionnante.",
+        "image": "images/basilique.jpg",
+        "location": "Brazzaville",
+        "link": "learn_more.html#basilique"
+      }
+    ],
+    "accommodations": [
+      {
+        "name": "Hôtel Mikhael",
+        "description": "Un hôtel moderne situé au cœur de Brazzaville, offrant des services de qualité et une vue imprenable sur la ville.",
+        "price": "120 USD / nuit",
+        "link": "accommodation_details.html#mikhael"
+      },
+      {
+        "name": "Le Palm Beach Hôtel",
+        "description": "Hôtel en bord de mer avec des chambres luxueuses et une vue splendide sur l'océan Atlantique.",
+        "price": "200 USD / nuit",
+        "link": "accommodation_details.html#palmbeach"
+      }
+    ],
+    "travelTips": [
+      {
+        "tip": "Assurez-vous d'avoir un passeport valide et un visa pour entrer en République du Congo.",
+        "category": "Documents"
+      },
+      {
+        "tip": "Portez des vêtements légers et confortables, adaptés au climat tropical.",
+        "category": "Vêtements"
+      }
+    ]
+  }
