@@ -1,112 +1,76 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
 }
 
-header, footer {
-    background-color: #004466;
+header {
+    background-color: #2C3E50;
     color: white;
-    text-align: center;
     padding: 1rem;
+    text-align: center;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    background-color: #003355;
-    padding: 0.5rem;
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-nav a {
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-}
-nav ul{
-    display: flex;
-    text-align: center;
-    padding: 1rem;
-}
-nav ul li{
-    padding: 1rem;
-    border-radius: 8px;
+    font-weight: 600;
 }
 
-nav a:hover {
+nav ul li a.active {
     text-decoration: underline;
 }
 
-.container {
+main {
     display: grid;
-    grid-template-areas:
-        "sidebar"
-        "main";
-    gap: 1rem;
-    padding: 1rem;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    padding: 20px;
 }
 
-@media (min-width: 641px) {
-    .container {
-        grid-template-areas:
-            "sidebar main";
-        grid-template-columns: 1fr 3fr;
-    }
+aside {
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
 }
 
-@media (min-width: 1025px) {
-    .container {
-        grid-template-areas:
-            "sidebar main main";
-        grid-template-columns: 1fr 2fr 2fr;
-    }
-}
-
-.sidebar {
-    background-color: #eef;
-    padding: 1rem;
-    border-radius: 8px;
-}
-
-.main-content {
-    grid-area: main;
+#grid-container {
     display: grid;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.item-card {
+.card {
     background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-.item-card figure img {
+.card img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-}
-
-@media (min-width: 1025px) {
-    .item-card figure img:hover {
-        transform: scale(1.1);
-    }
-}
-
-button {
-    background-color: #004466;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;
 }
 
-button:hover {
-    background-color: #003355;
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2C3E50;
+    color: white;
+    margin-top: 20px;
 }

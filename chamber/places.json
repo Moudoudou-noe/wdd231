@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Congo River",
+        "image": "images/museum.jpg",
+        "description": "The Congo River is the second longest river in Africa and a major waterway in the region.."
+    },
+    {
+        "name": "Basilica Sainte-Anne",
+        "image": "images/Sainte-Anne.jpg",
+        "description": "A beautiful Roman Catholic basilica known for its unique green-tiled roof and architecture."
+    },
+    {
+        "name": "Pointe-Noire Beach",
+        "image": "images/Pointe-Noire.jpg",
+        "description": "A stunning coastline with golden sands, attracting locals and tourists alike."
+    },
+    {
+        "name": "Lesio Louna Gorilla Reserve",
+        "image": "images/Louna-Gorilla.jpg",
+        "description": "A sanctuary dedicated to the protection of western lowland gorillas."
+    }
+]
